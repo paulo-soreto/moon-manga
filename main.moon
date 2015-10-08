@@ -12,7 +12,13 @@ title = arg[1]\gsub '%s+', '_'
 chapter = 0
 source = ''
 
-
+--
+-- log
+--
+-- Registra uma mensagem no arquivo de logs.
+--
+-- @param   message string  Mensagem
+--
 log = (message) ->
     file = io.open 'log', 'a'
     file\write message.."\n"
